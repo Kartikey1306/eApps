@@ -3653,7 +3653,9 @@
       "tests_passed": true,
       "test_count": 13,
       "release": "v1.8.0",
-      "platform": "mobile"
+      "platform": [
+        "mobile"
+      ]
     },
     {
       "id": "healthkey-webapp",
@@ -3672,7 +3674,9 @@
       "tests_passed": true,
       "test_count": 9,
       "release": "v1.8.0",
-      "platform": "mobile"
+      "platform": [
+        "mobile"
+      ]
     },
     {
       "id": "healthband-extension",
@@ -3691,7 +3695,9 @@
       "tests_passed": true,
       "test_count": 13,
       "release": "v1.8.0",
-      "platform": "mobile"
+      "platform": [
+        "mobile"
+      ]
     },
     {
       "id": "healthband-webapp",
@@ -3710,7 +3716,9 @@
       "tests_passed": true,
       "test_count": 10,
       "release": "v1.8.0",
-      "platform": "mobile"
+      "platform": [
+        "mobile"
+      ]
     },
     {
       "id": "healthband-desktop",
@@ -3729,7 +3737,9 @@
       "tests_passed": true,
       "test_count": 43,
       "release": "v1.8.0",
-      "platform": "mobile"
+      "platform": [
+        "mobile"
+      ]
     },
     {
       "id": "healthkey-desktop",
@@ -3748,14 +3758,18 @@
       "tests_passed": true,
       "test_count": 16,
       "release": "v1.8.0",
-      "platform": "mobile"
+      "platform": [
+        "mobile"
+      ]
     },
     {
       "id": "eride",
       "name": "eRide",
       "description": "Smart mobility app for EmbeddedOS",
       "category": "mobile",
-      "platform": "mobile",
+      "platform": [
+        "mobile"
+      ],
       "version": "1.9.0"
     },
     {
@@ -3763,7 +3777,9 @@
       "name": "eSocial",
       "description": "Social networking for EmbeddedOS",
       "category": "mobile",
-      "platform": "mobile",
+      "platform": [
+        "mobile"
+      ],
       "version": "1.9.0"
     },
     {
@@ -3771,7 +3787,9 @@
       "name": "eTrack",
       "description": "GPS tracking for EmbeddedOS",
       "category": "mobile",
-      "platform": "mobile",
+      "platform": [
+        "mobile"
+      ],
       "version": "1.9.0"
     },
     {
@@ -3779,7 +3797,9 @@
       "name": "eTravel",
       "description": "Travel companion for EmbeddedOS",
       "category": "mobile",
-      "platform": "mobile",
+      "platform": [
+        "mobile"
+      ],
       "version": "1.9.0"
     }
   ]
