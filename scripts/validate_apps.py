@@ -13,6 +13,8 @@ import re
 import sys
 
 APP_ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
+AI_CAP_RE = re.compile(r"^[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*)*$")
+AI_CAP_LEVELS = ("none", "read", "write", "readwrite")
 VERSION_RE = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+")
 
 
@@ -79,6 +81,17 @@ def validate(data):
         ts = a.get("test_status")
         if ts is not None and ts not in ("passing", "failing", "unknown"):
             errors.append(f"{where} ({aid}) bad test_status {ts!r}")
+        caps = a.get("ai_capabilities")
+        if caps is not None:
+            if not isinstance(caps, dict):
+                errors.append(f"{where} ({aid}) ai_capabilities must be an object")
+            else:
+                for k, v in caps.items():
+                    if not AI_CAP_RE.match(k):
+                        errors.append(f"{where} ({aid}) bad ai_capability name {k!r}")
+                    if v not in AI_CAP_LEVELS:
+                        errors.append(
+                            f"{where} ({aid}) bad ai_capability level {v!r} for {k!r}")
 
     if isinstance(meta.get("total_apps"), int) and meta["total_apps"] != len(apps):
         errors.append(

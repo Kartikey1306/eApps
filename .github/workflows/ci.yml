@@ -17,6 +17,16 @@ permissions:
   contents: read
 
 jobs:
+  validate-apps:
+    name: Validate apps.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate marketplace catalogue
+        run: python3 scripts/validate_apps.py data/apps.json
   build:
     name: Native (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
